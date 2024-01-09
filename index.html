@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maeldo's Portfolio</title>
+    <meta name="description" content="Maeldo's Portfolio">
     <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -164,8 +164,7 @@
                 </div>
             </div>
         </div>    
-        <div class="copyright">
-            <p>© 2023 Maeldo Gjoni. All rights reserved.</p>
+        <div class="copyright" id="copyright">
         </div>   
     </div>
 
@@ -178,12 +177,6 @@
         backSpeed: 100,
         loop: true
     });
-
-
-
-
-
-
     var tablinks = document.getElementsByClassName('tablinks');
     var tabcontents = document.getElementsByClassName('tabs-content');
 
@@ -225,6 +218,12 @@
     function closemenu(){
         sidemenu.style.right = "-250px";
     }
+</script>
+<script>
+    var yearfooter = document.getElementById('copyright');
+    var date = new Date();
+    var year = date.getFullYear();
+    yearfooter.innerHTML = '<p>© ' + year + ' Maeldo Gjoni. All rights reserved. </p>';
 </script>
 
 </body>
